@@ -23,7 +23,7 @@ terms of the MIT license. A copy of the license can be found in the file
 // Fall back to generic allocation only if the list is empty.
 extern inline void* _mi_page_malloc(mi_heap_t* heap, mi_page_t* page, size_t size) mi_attr_noexcept {
   mi_assert_internal(page->block_size==0||page->block_size >= size);
-  mi_block_t* block = page->free
+  mi_block_t* block = page->free;
   if (mi_unlikely(block == NULL)) {
     return _mi_malloc_generic(heap, size); // slow path
   }
