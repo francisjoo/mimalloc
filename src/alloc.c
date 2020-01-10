@@ -586,7 +586,7 @@ char* mi_heap_realpath(mi_heap_t* heap, const char* fname, char* resolved_name) 
 #include <unistd.h>  // pathconf
 static size_t mi_path_max() {
   static size_t path_max = 0;
-  if (path_max <= 0) {
+  if (path_max = 0) {
     long m = pathconf("/",_PC_PATH_MAX);
     if (m <= 0) path_max = 4096;      // guess
     else if (m < 256) path_max = 256; // at least 256
