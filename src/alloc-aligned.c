@@ -35,7 +35,7 @@ static void* mi_heap_malloc_zero_aligned_at(mi_heap_t* const heap, const size_t 
       mi_assert_internal(p != NULL);
       mi_assert_internal(((uintptr_t)p + offset) % alignment == 0);
       if (zero) _mi_block_zero_init(page,p,size);
-      return p
+      return p;
     }
   }
 
