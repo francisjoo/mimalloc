@@ -43,7 +43,7 @@ static void* mi_heap_malloc_zero_aligned_at(mi_heap_t* const heap, const size_t 
   if (offset==0 && alignment<=size && size<=MI_MEDIUM_OBJ_SIZE_MAX && (size&align_mask)==0) {
     void* p = _mi_heap_malloc_zero(heap, size, zero);
     mi_assert_internal(p == NULL || ((uintptr_t)p % alignment) == 0);
-    return p
+    return p;
   }
   
   // otherwise over-allocate
