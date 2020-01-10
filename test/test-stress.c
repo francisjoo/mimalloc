@@ -21,7 +21,7 @@ terms of the MIT license.
 //
 // argument defaults
 //static int THREADS = 32;      // more repeatable if THREADS <= #processors
-static int THREADS = 10;
+static int THREADS = 4;
 static int SCALE   = 50;      // scaling factor
 static int ITER    = 10;      // N full iterations re-creating all threads
 
