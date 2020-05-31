@@ -1,0 +1,4 @@
+[submodule "sub/intelligent-auto"]
+	path = sub/intelligent-auto
+	url = https://github.com/francisjoo/intelligent-auto.git
+	branch = master
